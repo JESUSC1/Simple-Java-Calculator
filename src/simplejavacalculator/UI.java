@@ -83,7 +83,7 @@ public class UI implements ActionListener {
       
       font = new Font("Consolas",Font.PLAIN, 18);
       
-      text = new JTextArea(1, 30);
+      text = new JTextArea(1, 15);
       
       textFont = new Font("Consolas",Font.BOLD, 24);
       

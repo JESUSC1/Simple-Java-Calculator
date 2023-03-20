@@ -107,7 +107,7 @@ public class UI implements ActionListener {
       butSin = new JButton("Sin");      
       butTan = new JButton("Tan");      
       butln = new JButton("ln");     
-      butxpowerofy = new JButton("<html>1<sup>x</sup></html>");
+      butxpowerofy = new JButton("<html>x<sup>y</sup></html>");
       butlog = new JButton("log10(x)");      
       butrate = new JButton("x%");      
       butabs = new JButton("abs(x)");      

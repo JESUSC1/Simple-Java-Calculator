@@ -18,7 +18,7 @@
 
 package simplejavacalculator;
 
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,12 +26,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import java.awt.Font;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 
-import java.awt.Image;
-import javax.swing.ImageIcon; 
+import javax.swing.ImageIcon;
 import java.io.*;
 
 public class UI implements ActionListener {
@@ -47,7 +45,10 @@ public class UI implements ActionListener {
    private final JPanel panelSub6;
    private final JPanel panelSub7;
    private final JPanel panelSub8;
-   
+
+   private final JPanel panelSub9;
+
+
    private final JTextArea text;
    
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
@@ -80,7 +81,10 @@ public class UI implements ActionListener {
       panelSub6 = new JPanel(new FlowLayout());
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
-      
+      panelSub9 = new JPanel();
+
+
+
       font = new Font("Consolas",Font.PLAIN, 18);
       
       text = new JTextArea(1, 15);
@@ -96,14 +100,14 @@ public class UI implements ActionListener {
       butMultiply = new JButton("*");      
       butDivide = new JButton("/");      
       butEqual = new JButton("=");      
-      butSquareRoot = new JButton("sqrt");      
-      butSquare = new JButton("x*x");      
-      butOneDividedBy = new JButton("1/x");      
+      butSquareRoot = new JButton("<html>&#8730;x</html>");
+      butSquare = new JButton("<html>x<sup>2</sup></html>");
+      butOneDividedBy = new JButton("<html>1 &#8260; x</html>");
       butCos = new JButton("Cos");      
       butSin = new JButton("Sin");      
       butTan = new JButton("Tan");      
       butln = new JButton("ln");     
-      butxpowerofy = new JButton("x^y");      
+      butxpowerofy = new JButton("<html>1<sup>x</sup></html>");
       butlog = new JButton("log10(x)");      
       butrate = new JButton("x%");      
       butabs = new JButton("abs(x)");      
@@ -144,8 +148,8 @@ public class UI implements ActionListener {
       butrate.setFont(font);
       butabs.setFont(font);
       butCancel.setFont(font);
-      butBinary.setFont(font); 
-      
+      butBinary.setFont(font);
+
       panel.add(Box.createHorizontalStrut(100));
       panelSub1.add(text);
       panel.add(panelSub1);
@@ -174,12 +178,21 @@ public class UI implements ActionListener {
       panelSub4.add(butCancel);
       panel.add(panelSub4);
       
-      panelSub5.add(Box.createHorizontalStrut(92));
+      //panelSub5.add(Box.createHorizontalStrut(75));
       panelSub5.add(but[0]);
-      panelSub5.add(butln); 
-      panelSub5.add(Box.createHorizontalStrut(210));
+      panelSub5.add(Box.createHorizontalStrut(95));
+      panelSub5.add(butln);
       panel.add(panelSub5);
-      
+
+
+
+      /*panelSub9.add(butln);
+      panelSub9.add(Box.createHorizontalStrut(200));
+      panel.add(panelSub9);*/
+
+
+
+
       panelSub6.add(butSquare);
       panelSub6.add(butSquareRoot);
       panelSub6.add(butOneDividedBy);

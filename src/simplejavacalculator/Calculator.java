@@ -21,7 +21,7 @@ import static java.lang.Math.pow;
 public class Calculator {
 
     public enum BiOperatorModes {
-        normal, add, minus, multiply, divide , xpowerofy //, dot
+        normal, add, minus, multiply, divide , xpowerofy
     }
 
     public enum MonoOperatorModes {

@@ -11,6 +11,8 @@
 
 package simplejavacalculator;
 
+import java.text.MessageFormat;
+
 import static java.lang.Double.NaN;
 import static java.lang.Math.log;
 import static java.lang.Math.log10;
@@ -19,21 +21,31 @@ import static java.lang.Math.pow;
 public class Calculator {
 
     public enum BiOperatorModes {
-        normal, add, minus, multiply, divide , xpowerofy 
+        normal, add, minus, multiply, divide , xpowerofy //, dot
     }
 
     public enum MonoOperatorModes {
         square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln,
     }
 
-    private Double num1, num2;
+    public static Double num1;
+    public static Double num2;
+    public static Double tempNum;
+
+    public static Double s;
+
     private BiOperatorModes mode = BiOperatorModes.normal;
 
     private Double calculateBiImpl() {
         if (mode == BiOperatorModes.normal) {
             return num2;
         }
+        /*if (mode == BiOperatorModes.dot) {
+            double s = Double.valueOf(MessageFormat.format("{0}.{1}", num1, 0));
+            return s;
+        }*/
         if (mode == BiOperatorModes.add) {
+            System.out.println("hi");
             if (num2 != 0) {
                 return num1 + num2;
             }
@@ -43,6 +55,7 @@ public class Calculator {
         if (mode == BiOperatorModes.minus) {
             return num1 - num2;
         }
+
         if (mode == BiOperatorModes.multiply) {
             return num1 * num2;
         }
@@ -101,13 +114,25 @@ public class Calculator {
             return Math.sin(Math.toRadians(num));
         }
         if (newMode == MonoOperatorModes.acos) {
-            return Math.acos(Math.toRadians(num));
+            if(num < 1) {
+                return Math.acos((num));
+            }else{
+                return NaN;
+            }
         }
         if (newMode == MonoOperatorModes.asin) {
-            return Math.acos(Math.toRadians(num));
+            if(num < 1) {
+                return Math.asin((num));
+            }else{
+                return NaN;
+            }
         }
         if (newMode == MonoOperatorModes.atan) {
-            return Math.acos(Math.toRadians(num));
+            if(num <= 90 && num >= -90) {
+                return Math.atan((num));
+            }else{
+                return NaN;
+            }
         }
         if (newMode == MonoOperatorModes.tan) {
             if (num == 0 || num % 180 == 0) {
@@ -118,15 +143,6 @@ public class Calculator {
             }
 
             return Math.tan(Math.toRadians(num));
-        }
-        if (newMode == MonoOperatorModes.asin) {
-            return Math.asin(Math.toRadians(num));
-        }
-        if (newMode == MonoOperatorModes.acos) {
-            return Math.acos(Math.toRadians(num));
-        }
-        if (newMode == MonoOperatorModes.atan) {
-            return Math.atan(Math.toRadians(num));
         }
 
         if (newMode == MonoOperatorModes.log) {

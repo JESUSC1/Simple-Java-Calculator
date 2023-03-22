@@ -31,6 +31,7 @@ import javax.swing.BoxLayout;
 
 import javax.swing.ImageIcon;
 import java.io.*;
+import java.text.MessageFormat;
 
 public class UI implements ActionListener {
 
@@ -53,8 +54,10 @@ public class UI implements ActionListener {
 
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
            butEqual, butCancel, butSquareRoot, butSquare, butOneDividedBy,
-           butCos, butSin, butTan, butxpowerofy, butlog, butrate, butabs, butBinary, butln;
+           butCos, butSin, butTan, butxpowerofy, butlog, butrate, butabs, butBinary, butln, butEmpt, butEmpt2;
    private final JButton butacos, butasin, butatan;
+
+   private final JButton butdot;
    private final Calculator calc;
 
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6",
@@ -117,7 +120,9 @@ public class UI implements ActionListener {
       butacos = new JButton("<html>cos<sup>-1</sup>(x)</html>");
       butasin= new JButton("<html>sin<sup>-1</sup>(x)</html>");
       butatan= new JButton("<html>tan<sup>-1</sup>(x)</html>");
-
+      butdot = new JButton(".");
+      butEmpt = new JButton(" ");
+      butEmpt2 = new JButton(" ");
       calc = new Calculator();
 
    }
@@ -156,6 +161,9 @@ public class UI implements ActionListener {
       butacos.setFont(font);
       butasin.setFont(font);
       butatan.setFont(font);
+      butdot.setFont(font);
+      butEmpt.setFont(font);
+      butEmpt2.setFont(font);
 
 
       panel.add(Box.createHorizontalStrut(100));
@@ -186,8 +194,19 @@ public class UI implements ActionListener {
       panelSub4.add(butCancel);
       panel.add(panelSub4);
 
+      butEmpt2.setOpaque(false);
+      butEmpt2.setContentAreaFilled(false);
+      butEmpt2.setBorderPainted(false);
+      butEmpt2.setEnabled(false);
+      butEmpt.setOpaque(false);
+      butEmpt.setContentAreaFilled(false);
+      butEmpt.setBorderPainted(false);
+      butEmpt.setEnabled(false);
+      panelSub5.add(butEmpt);
       panelSub5.add(but[0]);
-      panelSub5.add(Box.createHorizontalStrut(95));
+      panelSub5.add(butEmpt2);
+      panelSub5.add(Box.createHorizontalStrut(15));
+      panelSub5.add(butdot);
       panelSub5.add(butln);
       panel.add(panelSub5);
 
@@ -239,6 +258,7 @@ public class UI implements ActionListener {
       butacos.addActionListener(this);
       butasin.addActionListener(this);
       butatan.addActionListener(this);
+      butdot.addActionListener(this);
 
 
       butEqual.addActionListener(this);
@@ -255,23 +275,34 @@ public class UI implements ActionListener {
 
       for (int i = 0; i < 10; i++) {
          if (source == but[i]) {
-            text.replaceSelection(buttonValue[i]);
-            return;
+            //text.replaceSelection(buttonValue[i]);
+            if(!text.getText().contains(".")){
+               text.replaceSelection(buttonValue[i]);
+            }else{
+               text.append(buttonValue[i]);
+            }
          }
       }
-
 
       try {
          checkNum = Double.parseDouble(text.getText());
       } catch(NumberFormatException k) {
 
       }
+      if (source == butdot) {
+         text.append(butdot.getText());
+      }
+
+
 
       if (checkNum != null || source == butCancel) {
+
+
          if (source == butAdd) {
             writer(calc.calculateBi(Calculator.BiOperatorModes.add, reader()));
             text.replaceSelection(butAdd.getText());
          }
+
 
          if (source == butMinus) {
             writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()));

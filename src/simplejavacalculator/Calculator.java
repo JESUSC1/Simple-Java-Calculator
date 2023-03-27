@@ -45,7 +45,6 @@ public class Calculator {
             return s;
         }*/
         if (mode == BiOperatorModes.add) {
-            System.out.println("hi");
             if (num2 != 0) {
                 return num1 + num2;
             }

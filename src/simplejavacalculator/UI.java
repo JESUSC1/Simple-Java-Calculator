@@ -275,7 +275,6 @@ public class UI implements ActionListener {
 
       for (int i = 0; i < 10; i++) {
          if (source == but[i]) {
-            //text.replaceSelection(buttonValue[i]);
             if(!text.getText().contains(".")){
                text.replaceSelection(buttonValue[i]);
             }else{
@@ -290,6 +289,7 @@ public class UI implements ActionListener {
 
       }
       if (source == butdot) {
+         butdot.setEnabled(false);
          text.append(butdot.getText());
       }
 
@@ -299,31 +299,36 @@ public class UI implements ActionListener {
 
 
          if (source == butAdd) {
+            butdot.setEnabled(true);
             writer(calc.calculateBi(Calculator.BiOperatorModes.add, reader()));
             text.replaceSelection(butAdd.getText());
          }
 
-
          if (source == butMinus) {
+            butdot.setEnabled(true);
             writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()));
             text.replaceSelection(butMinus.getText());
          }
 
          if (source == butMultiply) {
+            butdot.setEnabled(true);
             writer(calc.calculateBi(Calculator.BiOperatorModes.multiply, reader()));
             text.replaceSelection(butMultiply.getText());
          }
 
          if (source == butDivide) {
+            butdot.setEnabled(true);
             writer(calc.calculateBi(Calculator.BiOperatorModes.divide, reader()));
             text.replaceSelection(butDivide.getText());
          }
 
          if (source == butxpowerofy) {
+            butdot.setEnabled(true);
             writer(calc.calculateBi(Calculator.BiOperatorModes.xpowerofy, reader()));
          }
 
          if (source == butSquare) {
+            butdot.setEnabled(true);
             writer(calc.calculateMono(Calculator.MonoOperatorModes.square, reader()));
          }
 
@@ -366,13 +371,14 @@ public class UI implements ActionListener {
          if (source == butEqual)
             writer(calc.calculateEqual(reader()));
 
-         if (source == butCancel)
+         if (source == butCancel){
+            butdot.setEnabled(true);
             writer(calc.reset());
+         }
 
          if (source == butBinary)
             parsetoBinary();
       }
-
       text.selectAll();
    }
 

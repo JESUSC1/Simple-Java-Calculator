@@ -220,9 +220,6 @@ public class UI implements ActionListener {
       panelSub7.add(butCos);
       panelSub7.add(butSin);
       panelSub7.add(butTan);
-      //panelSub7.add(butacos);
-      //panelSub7.add(butasin);
-      //panelSub7.add(butatan);
       panel.add(panelSub7);
 
       panelSub9.add(butacos);

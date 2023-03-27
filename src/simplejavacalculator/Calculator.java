@@ -10,9 +10,6 @@
  */
 
 package simplejavacalculator;
-
-import java.text.MessageFormat;
-
 import static java.lang.Double.NaN;
 import static java.lang.Math.log;
 import static java.lang.Math.log10;
@@ -30,9 +27,6 @@ public class Calculator {
 
     public static Double num1;
     public static Double num2;
-    public static Double tempNum;
-
-    public static Double s;
 
     private BiOperatorModes mode = BiOperatorModes.normal;
 
@@ -40,10 +34,6 @@ public class Calculator {
         if (mode == BiOperatorModes.normal) {
             return num2;
         }
-        /*if (mode == BiOperatorModes.dot) {
-            double s = Double.valueOf(MessageFormat.format("{0}.{1}", num1, 0));
-            return s;
-        }*/
         if (mode == BiOperatorModes.add) {
             if (num2 != 0) {
                 return num1 + num2;

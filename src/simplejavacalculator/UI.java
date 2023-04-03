@@ -22,18 +22,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
+import javax.swing.*;
 
-import javax.swing.ImageIcon;
 import java.io.*;
 import java.text.MessageFormat;
 
 public class UI implements ActionListener {
+   private JComboBox<String> themeSelector;
 
    private final JFrame frame;
 
@@ -128,6 +123,12 @@ public class UI implements ActionListener {
    }
 
    public void init() {
+      String[] themeOptions = {"Light", "Dark"};
+      themeSelector = new JComboBox<>(themeOptions);
+      themeSelector.addActionListener(this);
+      panel.add(themeSelector);
+      frame.setVisible(true);
+
       frame.setSize(450, 600);
       frame.setLocationRelativeTo(null);
       frame.setResizable(false);
@@ -263,6 +264,8 @@ public class UI implements ActionListener {
 
       frame.add(panel);
       frame.setVisible(true);
+
+      //setDarkTheme();
    }
 
    @Override
@@ -376,6 +379,43 @@ public class UI implements ActionListener {
          if (source == butBinary)
             parsetoBinary();
       }
+      if (e.getSource() == themeSelector) {
+         // Get the selected theme from the themeSelector
+         String selectedTheme = (String) themeSelector.getSelectedItem();
+
+         // Check if the selected theme is "Dark"
+         if (selectedTheme.equals("Dark")) {
+            // Set the UI components to the dark theme
+            frame.setBackground(Color.DARK_GRAY);
+            panel.setBackground(Color.DARK_GRAY);
+            panelSub1.setBackground(Color.DARK_GRAY);
+            panelSub2.setBackground(Color.DARK_GRAY);
+            panelSub3.setBackground(Color.DARK_GRAY);
+            panelSub4.setBackground(Color.DARK_GRAY);
+            panelSub5.setBackground(Color.DARK_GRAY);
+            panelSub6.setBackground(Color.DARK_GRAY);
+            panelSub7.setBackground(Color.DARK_GRAY);
+            panelSub8.setBackground(Color.DARK_GRAY);
+            panelSub9.setBackground(Color.DARK_GRAY);
+            // Add more UI components here...
+         }
+         if  (selectedTheme.equals("Light")) {
+            // Set the UI components to the light theme
+            frame.setBackground(Color.WHITE);
+            panel.setBackground(Color.WHITE);
+            text.setBackground(Color.lightGray);
+            panelSub1.setBackground(Color.WHITE);
+            panelSub2.setBackground(Color.WHITE);
+            panelSub3.setBackground(Color.WHITE);
+            panelSub4.setBackground(Color.WHITE);
+            panelSub5.setBackground(Color.WHITE);
+            panelSub6.setBackground(Color.WHITE);
+            panelSub7.setBackground(Color.WHITE);
+            panelSub8.setBackground(Color.WHITE);
+            panelSub9.setBackground(Color.WHITE);
+            // Add more UI components here...
+         }
+      }
       text.selectAll();
    }
 
@@ -403,4 +443,5 @@ public class UI implements ActionListener {
          text.setText(Double.toString(num));
       }
    }
+
 }

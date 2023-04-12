@@ -283,13 +283,22 @@ public class UI implements ActionListener {
       Double checkNum = null;
 
       for (int i = 0; i < 10; i++) {
-         if (source == but[i]) {
+         /*if (source == but[i]) {
             if(!text.getText().contains(".")){
                text.replaceSelection(buttonValue[i]);
             }else{
                text.append(buttonValue[i]);
             }
+         }*/
+         if (source == but[i]) {
+            if(text.getText().contains(".")){
+               text.append(buttonValue[i]);
+               return;
+            }
+            text.replaceSelection(buttonValue[i]);
+            return;
          }
+
       }
 
       try {

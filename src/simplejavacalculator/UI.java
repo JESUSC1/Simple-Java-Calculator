@@ -52,6 +52,9 @@ public class UI implements ActionListener {
            butCos, butSin, butTan, butxpowerofy, butlog, butrate, butabs, butBinary, butln, butEmpt, butEmpt2;
    private final JButton butacos, butasin, butatan;
 
+   private final JButton butCot, butCsc;
+
+
    private final JButton butdot;
    private final Calculator calc;
 
@@ -106,6 +109,8 @@ public class UI implements ActionListener {
       butSin = new JButton("Sin");
       butTan = new JButton("Tan");
       butln = new JButton("ln");
+      butCot = new JButton("Cot");
+      butCsc = new JButton("Csc");
       butxpowerofy = new JButton("<html>x<sup>y</sup></html>");
       butlog = new JButton("log10(x)");
       butrate = new JButton("x%");
@@ -221,6 +226,8 @@ public class UI implements ActionListener {
       panelSub7.add(butCos);
       panelSub7.add(butSin);
       panelSub7.add(butTan);
+      panelSub7.add(butCot);
+      panelSub7.add(butCsc);
       panel.add(panelSub7);
 
       panelSub9.add(butacos);
@@ -247,6 +254,8 @@ public class UI implements ActionListener {
       butCos.addActionListener(this);
       butSin.addActionListener(this);
       butTan.addActionListener(this);
+      butCot.addActionListener(this);
+      butCsc.addActionListener(this);
       butln.addActionListener(this);
       butxpowerofy.addActionListener(this);
       butlog.addActionListener(this);
@@ -346,6 +355,12 @@ public class UI implements ActionListener {
 
          if (source == butTan)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.tan, reader()));
+
+         if (source == butCot)
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.cot, reader()));
+
+         if (source == butCsc)
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.csc, reader()));
 
          if (source == butlog)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.log, reader()));

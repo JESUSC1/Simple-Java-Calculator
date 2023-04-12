@@ -425,18 +425,18 @@ public class UI implements ActionListener {
          }
          if  (selectedTheme.equals("Light")) {
             // Set the UI components to the light theme
-            frame.setBackground(Color.WHITE);
-            panel.setBackground(Color.WHITE);
-            text.setBackground(Color.lightGray);
-            panelSub1.setBackground(Color.WHITE);
-            panelSub2.setBackground(Color.WHITE);
-            panelSub3.setBackground(Color.WHITE);
-            panelSub4.setBackground(Color.WHITE);
-            panelSub5.setBackground(Color.WHITE);
-            panelSub6.setBackground(Color.WHITE);
-            panelSub7.setBackground(Color.WHITE);
-            panelSub8.setBackground(Color.WHITE);
-            panelSub9.setBackground(Color.WHITE);
+            frame.setBackground(Color.lightGray);
+            panel.setBackground(Color.lightGray);
+            text.setBackground(Color.WHITE);
+            panelSub1.setBackground(Color.lightGray);
+            panelSub2.setBackground(Color.lightGray);
+            panelSub3.setBackground(Color.lightGray);
+            panelSub4.setBackground(Color.lightGray);
+            panelSub5.setBackground(Color.lightGray);
+            panelSub6.setBackground(Color.lightGray);
+            panelSub7.setBackground(Color.lightGray);
+            panelSub8.setBackground(Color.lightGray);
+            panelSub9.setBackground(Color.lightGray);
             // Add more UI components here...
          }
       }

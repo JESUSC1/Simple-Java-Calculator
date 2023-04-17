@@ -54,7 +54,8 @@ public class UI implements ActionListener {
 
    private final JButton butCot, butCsc;
 
-
+   private final JButton butpi;
+   
    private final JButton butdot;
    private final Calculator calc;
 
@@ -123,6 +124,7 @@ public class UI implements ActionListener {
       butdot = new JButton(".");
       butEmpt = new JButton(" ");
       butEmpt2 = new JButton(" ");
+      butpi = new JButton("π");
       calc = new Calculator();
 
    }
@@ -170,6 +172,7 @@ public class UI implements ActionListener {
       butdot.setFont(font);
       butEmpt.setFont(font);
       butEmpt2.setFont(font);
+      butpi.setFont(font);
 
 
       panel.add(Box.createHorizontalStrut(100));
@@ -221,6 +224,7 @@ public class UI implements ActionListener {
       panelSub6.add(butSquareRoot);
       panelSub6.add(butOneDividedBy);
       panelSub6.add(butxpowerofy);
+      panelSub6.add(butpi);
       panel.add(panelSub6);
 
       panelSub7.add(butCos);
@@ -266,6 +270,7 @@ public class UI implements ActionListener {
       butasin.addActionListener(this);
       butatan.addActionListener(this);
       butdot.addActionListener(this);
+      butpi.addActionListener(this);
 
 
       butEqual.addActionListener(this);
@@ -391,6 +396,10 @@ public class UI implements ActionListener {
 
          if (source == butatan)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()));
+         
+         if (source == butpi)
+            //System.out.println("Pi button clicked");
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.pi, reader()));
 
          if (source == butEqual)
             writer(calc.calculateEqual(reader()));

@@ -10,10 +10,12 @@
  */
 
 package simplejavacalculator;
+import java.lang.Math;
 import static java.lang.Double.NaN;
 import static java.lang.Math.log;
 import static java.lang.Math.log10;
 import static java.lang.Math.pow;
+
 
 public class Calculator {
 
@@ -22,7 +24,7 @@ public class Calculator {
     }
 
     public enum MonoOperatorModes {
-        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc
+        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc, pi
     }
 
     public static Double num1;
@@ -162,6 +164,10 @@ public class Calculator {
                 return NaN;
             }
             return 1 / Math.sin(Math.toRadians(num));
+        }
+        
+        if (newMode == MonoOperatorModes.pi) {
+            return Math.PI;
         }
 
         // never reach

@@ -331,9 +331,17 @@ public class UI implements ActionListener {
             text.replaceSelection(butMultiply.getText());
          }
 
-         if (source == butDivide) {
+         if (source == butDivide) { // TODO: fix so that number/0 == 'undefined'
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.divide, reader()));
+            double num = reader();
+            if (num == 0) {
+               text.setText("undefined"); // Set text to "undefined" if the first number is zero
+               return;
+            } else if (calc.num1 == null && num == 0) {
+               text.setText("undefined"); // Set text to "undefined" if the second number (divisor) is also zero
+               return;
+            }
+            writer(calc.calculateBi(Calculator.BiOperatorModes.divide, num));
             text.replaceSelection(butDivide.getText());
          }
 
@@ -389,8 +397,9 @@ public class UI implements ActionListener {
          if (source == butatan)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()));
 
-         if (source == butpi)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.pi, reader()));
+         if (source == butpi) {
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.pi, reader())); //TODO: Do we need a button for .piOperation? (see Calculator.java)
+         }
 
          if (source == butEqual)
             writer(calc.calculateEqual(reader()));

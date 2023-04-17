@@ -279,7 +279,6 @@ public class UI implements ActionListener {
       frame.add(panel);
       frame.setVisible(true);
 
-      //setDarkTheme();
    }
 
    @Override
@@ -288,13 +287,6 @@ public class UI implements ActionListener {
       Double checkNum = null;
 
       for (int i = 0; i < 10; i++) {
-         /*if (source == but[i]) {
-            if(!text.getText().contains(".")){
-               text.replaceSelection(buttonValue[i]);
-            }else{
-               text.append(buttonValue[i]);
-            }
-         }*/
          if (source == but[i]) {
             if(text.getText().contains(".")){
                text.append(buttonValue[i]);
@@ -303,7 +295,6 @@ public class UI implements ActionListener {
             text.replaceSelection(buttonValue[i]);
             return;
          }
-
       }
 
       try {
@@ -315,8 +306,9 @@ public class UI implements ActionListener {
          butdot.setEnabled(false);
          text.append(butdot.getText());
       }
-
-
+      if(checkNum == null && source == butpi){
+         text.append(Double.toString(Math.PI));
+      }
 
       if (checkNum != null || source == butCancel) {
 
@@ -396,9 +388,8 @@ public class UI implements ActionListener {
 
          if (source == butatan)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()));
-         
+
          if (source == butpi)
-            //System.out.println("Pi button clicked");
             writer(calc.calculateMono(Calculator.MonoOperatorModes.pi, reader()));
 
          if (source == butEqual)
@@ -406,6 +397,7 @@ public class UI implements ActionListener {
 
          if (source == butCancel){
             butdot.setEnabled(true);
+            butpi.setEnabled(true);
             writer(calc.reset());
          }
 

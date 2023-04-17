@@ -167,7 +167,7 @@ public class Calculator {
         }
         
         if (newMode == MonoOperatorModes.pi) {
-            return Math.PI;
+            return Math.PI*num;
         }
 
         // never reach

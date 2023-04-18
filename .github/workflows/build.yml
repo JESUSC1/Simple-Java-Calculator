@@ -44,8 +44,9 @@ jobs:
 
       # Uploads the JaCoCo coverage report to Codecov.io.
       - name: Upload coverage report to Codecov.io
-        uses: codecov/codecov-action@v2.1.0
+        uses: codecov/codecov-action@v3
         with:
+          token: ${{ secrets.CODECOV_TOKEN }}
           # Specifies the location of the JaCoCo coverage report.
           # This must match the location specified in the build.gradle file.
           files: build/reports/jacoco/test/jacocoTestReport.xml

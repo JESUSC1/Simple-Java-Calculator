@@ -6,8 +6,13 @@
 
 ---
  # Project Metrics
-- Complexity
+ 
+-  Complexity
 ![GitHub repo size](https://img.shields.io/github/repo-size/JESUSC1/Simple-Java-Calculator)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/353a246a5bd04977abe37351c2ee0f20)](https://app.codacy.com/gh/JESUSC1/Simple-Java-Calculator/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e644d4971ca9323a13ce/maintainability)](https://codeclimate.com/github/JESUSC1/Simple-Java-Calculator/maintainability)
+![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/JESUSC1/Simple-Java-Calculator)
+[![CodeFactor](https://www.codefactor.io/repository/github/jesusc1/simple-java-calculator/badge)](https://www.codefactor.io/repository/github/jesusc1/simple-java-calculator)
 
 [![.github/workflows/.travis.yml](https://github.com/JESUSC1/Simple-Java-Calculator/actions/workflows/.travis.yml/badge.svg)](https://github.com/JESUSC1/Simple-Java-Calculator/actions/workflows/.travis.yml)
 

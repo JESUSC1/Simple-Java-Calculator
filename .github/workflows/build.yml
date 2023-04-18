@@ -1,0 +1,53 @@
+# This is a GitHub Actions workflow file, which defines a set of jobs and steps to be run upon certain events.
+name: Java CI with JaCoCo
+
+# This workflow runs upon push or pull request events in the main branch of the repo.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# This job sets up the Java environment, checks out the repo code, and builds the project.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Sets up the Java environment using the specified version.
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      # Checks out the repo code to the runner's file system.
+      - uses: actions/checkout@v2
+
+      # Builds the project using the Gradle wrapper script.
+      - name: Build with Gradle
+        run: ./gradlew build
+
+  # This job runs the tests and generates a JaCoCo coverage report.
+  test:
+    runs-on: ubuntu-latest
+    needs: build # Depends on the 'build' job, which must complete successfully.
+    steps:
+      # Checks out the repo code to the runner's file system.
+      - uses: actions/checkout@v2
+
+      # Runs the tests using the Gradle wrapper script.
+      - name: Run tests with Gradle
+        run: ./gradlew test
+
+      # Generates a JaCoCo coverage report using the Gradle wrapper script.
+      - name: Generate JaCoCo coverage report
+        run: ./gradlew jacocoTestReport
+
+      # Uploads the JaCoCo coverage report to Codecov.io.
+      - name: Upload coverage report to Codecov.io
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          # Specifies the location of the JaCoCo coverage report.
+          # This must match the location specified in the build.gradle file.
+          files: build/reports/jacoco/test/jacocoTestReport.xml
+
+

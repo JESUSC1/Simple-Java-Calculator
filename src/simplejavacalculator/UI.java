@@ -288,13 +288,19 @@ public class UI implements ActionListener {
 
       for (int i = 0; i < 10; i++) {
          if (source == but[i]) {
+            butpi.setEnabled(false);
             if(text.getText().contains(".")){
                text.append(buttonValue[i]);
                return;
             }
             text.replaceSelection(buttonValue[i]);
             return;
+         }else{
+            butpi.setEnabled(true);
          }
+      }
+      if (source == butpi) {
+         text.replaceSelection(Double.toString(Math.PI));
       }
 
       try {
@@ -308,6 +314,13 @@ public class UI implements ActionListener {
       }
       if(checkNum == null && source == butpi){
          text.append(Double.toString(Math.PI));
+      }
+      for (int i = 0; i < 10; i++) {
+         if(source == butpi) {
+            but[i].setEnabled(false);
+         }else{
+            but[i].setEnabled(true);
+         }
       }
 
       if (checkNum != null || source == butCancel) {
@@ -333,15 +346,15 @@ public class UI implements ActionListener {
 
          if (source == butDivide) { // TODO: fix so that number/0 == 'undefined'
             butdot.setEnabled(true);
-            double num = reader();
+            /*double num = reader();
             if (num == 0) {
                text.setText("undefined"); // Set text to "undefined" if the first number is zero
                return;
             } else if (calc.num1 == null && num == 0) {
                text.setText("undefined"); // Set text to "undefined" if the second number (divisor) is also zero
                return;
-            }
-            writer(calc.calculateBi(Calculator.BiOperatorModes.divide, num));
+            }*/
+            writer(calc.calculateBi(Calculator.BiOperatorModes.divide, reader()));
             text.replaceSelection(butDivide.getText());
          }
 
@@ -396,10 +409,6 @@ public class UI implements ActionListener {
 
          if (source == butatan)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()));
-
-         if (source == butpi) {
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.pi, reader())); //TODO: Do we need a button for .piOperation? (see Calculator.java)
-         }
 
          if (source == butEqual)
             writer(calc.calculateEqual(reader()));

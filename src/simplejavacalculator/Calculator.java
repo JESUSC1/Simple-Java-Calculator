@@ -21,11 +21,11 @@ import static java.lang.Math.pow;
 public class Calculator {
 
     public enum BiOperatorModes {
-        normal, add, minus, multiply, divide, xpowerofy, piOperation
+        normal, add, minus, multiply, divide, xpowerofy
     }
 
     public enum MonoOperatorModes {
-        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc, piOperation, pi
+        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc
     }
 
     public static Double num1;
@@ -57,9 +57,7 @@ public class Calculator {
         if (mode == BiOperatorModes.xpowerofy) {
             return pow(num1, num2);
         }
-        if (mode == BiOperatorModes.piOperation) {
-            return num1 - Math.PI * num2;
-        }
+
 
         // never reach
         throw new Error();
@@ -122,16 +120,16 @@ public class Calculator {
             if (num < -1 || num > 1) {
                 return NaN;
             }
-            return Math.toDegrees(Math.acos(num));
+            return Math.toRadians(Math.acos(num));
         }
         if (newMode == MonoOperatorModes.asin) {
             if (num < -1 || num > 1) {
                 return NaN;
             }
-            return Math.toDegrees(Math.asin(num));
+            return Math.toRadians(Math.asin(num));
         }
         if (newMode == MonoOperatorModes.atan) {
-            return Math.toDegrees(Math.atan(num));
+            return Math.toRadians(Math.atan(num));
         }
         if (newMode == MonoOperatorModes.tan) {
             if (num % 180 == 90) {
@@ -168,12 +166,6 @@ public class Calculator {
                 return NaN;
             }
             return 1 / Math.sin(Math.toRadians(num));
-        }
-        if (newMode == MonoOperatorModes.pi) {
-            return Math.PI;
-        }
-        if (newMode == MonoOperatorModes.piOperation) {
-            return num - Math.PI;
         }
 
         // never reach

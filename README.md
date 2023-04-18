@@ -7,6 +7,8 @@
 ---
 [![.github/workflows/.travis.yml](https://github.com/JESUSC1/Simple-Java-Calculator/actions/workflows/.travis.yml/badge.svg)](https://github.com/JESUSC1/Simple-Java-Calculator/actions/workflows/.travis.yml)
 
+[![codecov](https://codecov.io/gh/JESUSC1/Simple-Java-Calculator/branch/master/graph/badge.svg)](https://codecov.io/gh/JESUSC1/Simple-Java-Calculator)
+
 This calculator is **simple** with an **easy to use code** to help novices **learn how to create a calculator** program with **`Java`**.
 
 ---

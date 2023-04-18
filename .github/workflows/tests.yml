@@ -1,0 +1,43 @@
+name: Java CI with Maven and JUnit
+
+# Defines the event that triggers the workflow to run
+on:
+  push:
+    branches: [ main ] # Only run the workflow when changes are pushed to the 'main' branch
+  pull_request:
+    branches: [ main ] # Only run the workflow when changes are made to a pull request targeting the 'main' branch
+
+# Defines the jobs that will run as part of the workflow
+jobs:
+  build:
+
+    # Defines the operating system for the job to run on
+    runs-on: ubuntu-latest
+
+    # Defines the steps to run as part of the job
+    steps:
+    - uses: actions/checkout@v2 # Checks out the repository to the runner machine
+    - name: Set up JDK 11 # Sets up JDK 11 on the runner machine
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+    - name: Build with Maven # Builds the project with Maven
+      run: mvn -B package --file pom.xml
+    - name: Run unit tests # Runs the unit tests with Maven
+      run: mvn test --file pom.xml
+    - name: Generate JaCoCo report # Generates a JaCoCo code coverage report
+      run: mvn jacoco:report --file pom.xml
+    - name: Upload JaCoCo report # Uploads the JaCoCo code coverage report to Codecov
+      uses: codecov/codecov-action@v2.1.0
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }} # Authenticates the upload with the Codecov token stored as a secret
+        files: ./target/site/jacoco/jacoco.xml # Specifies the path to the JaCoCo code coverage report
+    - name: Check unit test status # Checks the status of the unit tests
+      run: |
+        if grep -Fq "[ERROR]" ./target/surefire-reports/TEST-com.example.calculator.CalculatorTest.xml; then
+          echo "Unit tests failed"
+          exit 1
+        else
+          echo "Unit tests passed"
+        fi
+        

@@ -5,6 +5,7 @@
 ![Logo Simple Java Calculator](logo.png)
 
 ---
+[![Build Status](https://travis-ci.org/JESUSC/Simple-Java-Calculator>.svg?branch=master)](https://travis-ci.org/JESUSC/Simple-Java-Calculator)
 
 This calculator is **simple** with an **easy to use code** to help novices **learn how to create a calculator** program with **`Java`**.
 

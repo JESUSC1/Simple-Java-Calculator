@@ -310,6 +310,7 @@ public class UI implements ActionListener {
       }
       if (source == butdot) {
          butdot.setEnabled(false);
+         butpi.setEnabled(false);
          text.append(butdot.getText());
       }
       if(checkNum == null && source == butpi){

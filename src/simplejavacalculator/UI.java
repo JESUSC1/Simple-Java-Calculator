@@ -43,6 +43,7 @@ public class UI implements ActionListener {
    private final JPanel panelSub8;
 
    private final JPanel panelSub9;
+   private final JPanel panelSub10;
 
 
    private final JTextArea text;
@@ -55,6 +56,7 @@ public class UI implements ActionListener {
    private final JButton butCot, butCsc;
 
    private final JButton butpi;
+   private final JButton buteuler;
    
    private final JButton butdot;
    private final Calculator calc;
@@ -85,6 +87,7 @@ public class UI implements ActionListener {
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
       panelSub9 = new JPanel(new FlowLayout());
+      panelSub10 = new JPanel(new FlowLayout());
 
 
 
@@ -125,6 +128,7 @@ public class UI implements ActionListener {
       butEmpt = new JButton(" ");
       butEmpt2 = new JButton(" ");
       butpi = new JButton("π");
+      buteuler = new JButton("e");
       calc = new Calculator();
 
    }
@@ -173,6 +177,7 @@ public class UI implements ActionListener {
       butEmpt.setFont(font);
       butEmpt2.setFont(font);
       butpi.setFont(font);
+      buteuler.setFont(font);
 
 
       panel.add(Box.createHorizontalStrut(100));
@@ -224,7 +229,6 @@ public class UI implements ActionListener {
       panelSub6.add(butSquareRoot);
       panelSub6.add(butOneDividedBy);
       panelSub6.add(butxpowerofy);
-      panelSub6.add(butpi);
       panel.add(panelSub6);
 
       panelSub7.add(butCos);
@@ -244,6 +248,11 @@ public class UI implements ActionListener {
       panelSub8.add(butabs);
       panelSub8.add(butBinary);
       panel.add(panelSub8);
+
+      panelSub10.add(butpi);
+      panelSub10.add(buteuler);
+      panel.add(panelSub10);
+
 
       for (int i = 0; i < 10; i++) {
          but[i].addActionListener(this);
@@ -271,6 +280,7 @@ public class UI implements ActionListener {
       butatan.addActionListener(this);
       butdot.addActionListener(this);
       butpi.addActionListener(this);
+      buteuler.addActionListener(this);
 
 
       butEqual.addActionListener(this);
@@ -301,6 +311,9 @@ public class UI implements ActionListener {
       }
       if (source == butpi) {
          text.replaceSelection(Double.toString(Math.PI));
+      }
+      if (source == buteuler) {
+         text.replaceSelection(Double.toString(Math.E));
       }
 
       try {
@@ -440,6 +453,7 @@ public class UI implements ActionListener {
             panelSub7.setBackground(Color.DARK_GRAY);
             panelSub8.setBackground(Color.DARK_GRAY);
             panelSub9.setBackground(Color.DARK_GRAY);
+            panelSub10.setBackground(Color.DARK_GRAY);
             // Add more UI components here...
          }
          if  (selectedTheme.equals("Light")) {
@@ -456,6 +470,7 @@ public class UI implements ActionListener {
             panelSub7.setBackground(Color.lightGray);
             panelSub8.setBackground(Color.lightGray);
             panelSub9.setBackground(Color.lightGray);
+            panelSub10.setBackground(Color.lightGray);
             // Add more UI components here...
          }
       }

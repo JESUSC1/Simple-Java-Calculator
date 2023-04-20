@@ -46,7 +46,7 @@ public class UI implements ActionListener {
    private final JPanel panelSub10;
 
 
-   private final JTextArea text;
+   public final JTextArea text;
 
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
            butEqual, butCancel, butSquareRoot, butSquare, butOneDividedBy,
@@ -356,31 +356,31 @@ public class UI implements ActionListener {
 
          if (source == butAdd) {
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.add, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.add, reader()),false);
             text.replaceSelection(butAdd.getText());
          }
 
          if (source == butMinus) {
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()),false);
             text.replaceSelection(butMinus.getText());
          }
 
          if (source == butPerm) {
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.nPr, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.nPr, reader()),false);
             text.replaceSelection(butPerm.getText());
          }
 
          if (source == butComb) {
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.nCr, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.nCr, reader()),false);
             text.replaceSelection(butComb.getText());
          }
 
          if (source == butMultiply) {
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.multiply, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.multiply, reader()),false);
             text.replaceSelection(butMultiply.getText());
          }
 
@@ -394,73 +394,73 @@ public class UI implements ActionListener {
                text.setText("undefined"); // Set text to "undefined" if the second number (divisor) is also zero
                return;
             }*/
-            writer(calc.calculateBi(Calculator.BiOperatorModes.divide, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.divide, reader()),false);
             text.replaceSelection(butDivide.getText());
          }
 
          if (source == butxpowerofy) {
             butdot.setEnabled(true);
-            writer(calc.calculateBi(Calculator.BiOperatorModes.xpowerofy, reader()));
+            writer(calc.calculateBi(Calculator.BiOperatorModes.xpowerofy, reader()),false);
          }
 
          if (source == butSquare) {
             butdot.setEnabled(true);
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.square, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.square, reader()),false);
          }
 
          if (source == butSquareRoot)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.squareRoot, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.squareRoot, reader()),false);
 
          if (source == butOneDividedBy)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.oneDividedBy, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.oneDividedBy, reader()),false);
 
          if (source == butCos)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.cos, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.cos, reader()),false);
 
          if (source == butSin)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.sin, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.sin, reader()),false);
 
          if (source == butTan)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.tan, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.tan, reader()),false);
 
          if (source == butCot)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.cot, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.cot, reader()),false);
 
          if (source == butCsc)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.csc, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.csc, reader()),false);
 
          if (source == butlog)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.log, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.log, reader()),false);
 
          if (source == butln)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.ln, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.ln, reader()),false);
 
          if (source == butrate)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.rate, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.rate, reader()),false);
 
          if (source == butabs)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.abs, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.abs, reader()),false);
 
          if (source == butacos)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.acos, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.acos, reader()),false);
 
          if (source == butasin)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.asin, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.asin, reader()),false);
 
          if (source == butatan)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()),false);
 
          if (source == butEqual)
-            writer(calc.calculateEqual(reader()));
+            writer(calc.calculateEqual(reader()),true);
 
          if (source == butCancel){
             butdot.setEnabled(true);
             butpi.setEnabled(true);
-            writer(calc.reset());
+            writer(calc.reset(),false);
          }
 
          if (source == butFact)
-            writer(calc.calculateMono(Calculator.MonoOperatorModes.fact, reader()));
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.fact, reader()),false);
 
          if (source == butBinary)
             parsetoBinary();
@@ -524,9 +524,13 @@ public class UI implements ActionListener {
       return num;
    }
 
-   public void writer(final Double num) {
+   public void writer(final Double num, boolean bool) {
       if (Double.isNaN(num)) {
-         text.setText("");
+         if(bool == true){
+            text.setText("undefined");
+         }else {
+            text.setText("");
+         }
       } else {
          text.setText(Double.toString(num));
       }

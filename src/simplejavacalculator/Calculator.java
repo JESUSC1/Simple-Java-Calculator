@@ -11,11 +11,8 @@
 
 package simplejavacalculator;
 
-import java.awt.*;
 import java.lang.Math;
 import static java.lang.Double.NaN;
-import static java.lang.Math.log;
-import static java.lang.Math.log10;
 import static java.lang.Math.pow;
 
 public class Calculator {
@@ -56,6 +53,7 @@ public class Calculator {
         if (mode == BiOperatorModes.divide) {
             if (num2 == 0) {
                 System.out.println("undefined");
+                //ui.text.setText("undefined");
                 return NaN;
             } else {
                 return num1 / num2;
@@ -91,8 +89,8 @@ public class Calculator {
             return NaN;
         } else {
             if (newMode == BiOperatorModes.divide && num == 0) {
-                Label text = null;
-                text.setText("undefined"); // TODO fix so that number/0 == "undefined"
+                //Label text = null;
+                //ui.text.setText("undefined"); // TODO fix so that number/0 == "undefined"
                 num1 = NaN;
             } else {
                 num2 = num;

@@ -57,6 +57,12 @@ public class UI implements ActionListener {
 
    private final JButton butpi;
    private final JButton buteuler;
+
+   private final JButton butFact;
+
+   private final JButton butPerm;
+
+   private final JButton butComb;
    
    private final JButton butdot;
    private final Calculator calc;
@@ -129,6 +135,9 @@ public class UI implements ActionListener {
       butEmpt2 = new JButton(" ");
       butpi = new JButton("π");
       buteuler = new JButton("e");
+      butFact = new JButton("n!");
+      butPerm = new JButton("nPr");
+      butComb =new JButton("nCr");
       calc = new Calculator();
 
    }
@@ -224,7 +233,6 @@ public class UI implements ActionListener {
       panelSub5.add(butln);
       panel.add(panelSub5);
 
-
       panelSub6.add(butSquare);
       panelSub6.add(butSquareRoot);
       panelSub6.add(butOneDividedBy);
@@ -251,6 +259,9 @@ public class UI implements ActionListener {
 
       panelSub10.add(butpi);
       panelSub10.add(buteuler);
+      panelSub10.add(butFact);
+      panelSub10.add(butPerm);
+      panelSub10.add(butComb);
       panel.add(panelSub10);
 
 
@@ -281,6 +292,9 @@ public class UI implements ActionListener {
       butdot.addActionListener(this);
       butpi.addActionListener(this);
       buteuler.addActionListener(this);
+      butFact.addActionListener(this);
+      butPerm.addActionListener(this);
+      butComb.addActionListener(this);
 
 
       butEqual.addActionListener(this);
@@ -350,6 +364,18 @@ public class UI implements ActionListener {
             butdot.setEnabled(true);
             writer(calc.calculateBi(Calculator.BiOperatorModes.minus, reader()));
             text.replaceSelection(butMinus.getText());
+         }
+
+         if (source == butPerm) {
+            butdot.setEnabled(true);
+            writer(calc.calculateBi(Calculator.BiOperatorModes.nPr, reader()));
+            text.replaceSelection(butPerm.getText());
+         }
+
+         if (source == butComb) {
+            butdot.setEnabled(true);
+            writer(calc.calculateBi(Calculator.BiOperatorModes.nCr, reader()));
+            text.replaceSelection(butComb.getText());
          }
 
          if (source == butMultiply) {
@@ -432,6 +458,9 @@ public class UI implements ActionListener {
             butpi.setEnabled(true);
             writer(calc.reset());
          }
+
+         if (source == butFact)
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.fact, reader()));
 
          if (source == butBinary)
             parsetoBinary();

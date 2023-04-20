@@ -21,11 +21,18 @@ import static java.lang.Math.pow;
 public class Calculator {
 
     public enum BiOperatorModes {
-        normal, add, minus, multiply, divide, xpowerofy
+        normal, add, minus, multiply, divide, xpowerofy, nPr, nCr
     }
 
     public enum MonoOperatorModes {
-        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc
+        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc, fact
+    }
+    public static double fact(double n) {
+        double factorial = 1;
+        for(double a = 2; a <= n; a++) {
+            factorial *= a;
+        }
+        return factorial;
     }
 
     public static Double num1;
@@ -57,6 +64,19 @@ public class Calculator {
         if (mode == BiOperatorModes.xpowerofy) {
             return pow(num1, num2);
         }
+        if(mode == BiOperatorModes.nPr) {
+            double a1, a2, number;
+            a1 = fact(num1);
+            number = num1 - num2;
+            a2 = fact(number);
+            return a1/a2;
+        }
+        if(mode == BiOperatorModes.nCr) {
+            double number = num1 - num2;
+            return fact(num1) / (fact(num2) *
+                    fact(number));
+        }
+
 
 
         // never reach
@@ -167,7 +187,9 @@ public class Calculator {
             }
             return 1 / Math.sin(Math.toRadians(num));
         }
-
+        if( newMode == MonoOperatorModes.fact){
+           return fact(num);
+        }
         // never reach
         throw new Error();
     }

@@ -384,16 +384,8 @@ public class UI implements ActionListener {
             text.replaceSelection(butMultiply.getText());
          }
 
-         if (source == butDivide) { // TODO: fix so that number/0 == 'undefined'
+         if (source == butDivide) {
             butdot.setEnabled(true);
-            /*double num = reader();
-            if (num == 0) {
-               text.setText("undefined"); // Set text to "undefined" if the first number is zero
-               return;
-            } else if (calc.num1 == null && num == 0) {
-               text.setText("undefined"); // Set text to "undefined" if the second number (divisor) is also zero
-               return;
-            }*/
             writer(calc.calculateBi(Calculator.BiOperatorModes.divide, reader()),false);
             text.replaceSelection(butDivide.getText());
          }

@@ -47,16 +47,8 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 <a name="Look_Comparison"></a>
 ## :sparkles: Example
 
-<p float="left">
-  <div>
-    <h3>Header 1</h3>
-    <img src="Screenshots/screenshot.png width="100">
-  </div>
-  <div>
-    <h3>Header 2</h3>
-    <img src="Screenshots/screenshot3.png width="100"> 
-  </div>
-</p>
+![alt-text-1]("Screenshots/screenshot.png "title-1") ![alt-text-2]("Screenshots/screenshot3.png "title-2")
+
 
 
 ## 💡 Authors

@@ -1,6 +1,6 @@
 <div align="center">
 
-# Simple Java Calculator
+# Simple Java Calculator with COMP 312 Additions
 
 ![Logo Simple Java Calculator](logo.png)
 

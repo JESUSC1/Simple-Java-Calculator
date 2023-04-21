@@ -130,20 +130,20 @@ public class Calculator {
         if (newMode == MonoOperatorModes.sin) {
             return Math.sin(Math.toRadians(num));
         }
-        if (newMode == MonoOperatorModes.acos) {
+       if (newMode == MonoOperatorModes.acos) {
             if (num < -1 || num > 1) {
                 return NaN;
             }
-            return Math.toRadians(Math.acos(num));
+            return Math.acos((num));
         }
         if (newMode == MonoOperatorModes.asin) {
             if (num < -1 || num > 1) {
                 return NaN;
             }
-            return Math.toRadians(Math.asin(num));
+            return Math.asin((num));
         }
         if (newMode == MonoOperatorModes.atan) {
-            return Math.toRadians(Math.atan(num));
+            return Math.atan((num));
         }
         if (newMode == MonoOperatorModes.tan) {
             if (num % 180 == 90) {

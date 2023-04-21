@@ -49,7 +49,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![](Screenshots/screenshot3.png)  |  ![](Screenshots/screenshot3.png)
+![](Screenshots/screenshot.png)  |  ![](Screenshots/screenshot3.png)
 
 
 ## 💡 Authors

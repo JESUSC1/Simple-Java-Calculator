@@ -6,7 +6,7 @@
 
 ---
  
- [Jump to My Section](#my-section)
+ [COMP 312 Project Modifications and Improvements](#COMP 312 Project Modifications and Improvements)
 
  # Project Metrics
 

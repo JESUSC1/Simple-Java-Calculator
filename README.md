@@ -85,7 +85,7 @@ Before                     |  After
 ## How to Use New Features
 - For any trig identity simply type in a value and press the specific trig identity button
   - Ex: 2tan
-- For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30*pi)
+- For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30 * pi =)
   - Note that you cannot press pi and then a number. You must press pi then an operation then a number
 - For Combinations and Permuations you have to press a number then press the desired funciton and then another button followed by the equals button
   - Ex: 12 nCr 6 =

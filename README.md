@@ -61,7 +61,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 - **[Pierre-Henry Soria](https://ph7.me)**
 
-### Modifications and Improvements
+### COMP 312 Project Modifications and Improvements
 - Abilty to show Text Panel on Mac (Jonathan Drysdale-Anderson)
 - Button Placements (Jonathan Drysdale-Anderson)
 - Button Super-Scripts (Jonathan Drysdale-Anderson)

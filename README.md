@@ -43,7 +43,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 ## :sparkles: Example
 
 <div>
-  <h3>Orignal Calculator Before Out Changes</h3>
+  <h3>Before Our Changes</h3>
   <img src="Screenshots/screenshot.png" width="400" style="display: inline-block;">
 </div>
 

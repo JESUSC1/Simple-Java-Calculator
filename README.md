@@ -42,14 +42,15 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 ## :sparkles: Example
 
-<div>
-  <h3>Before Our Changes</h3>
-  <img src="Screenshots/screenshot.png" width="400" style="display: inline-block;">
-</div>
-
-<div>
-  <h3>After Our Changes</h3>
-  <img src="Screenshots/screenshot3.png" width="400" style="display: inline-block;">
+<div style="width: 800px;">
+  <div style="width: 400px; display: inline-block; text-align: center;">
+    <h3>Before our Changes</h3>
+    <img src="Screenshots/screenshot.png" width="400">
+  </div>
+  <div style="width: 400px; display: inline-block; text-align: center;">
+    <h3>After our Changes</h3>
+    <img src="Screenshots/screenshot3.png" width="400">
+  </div>
 </div>
 
 

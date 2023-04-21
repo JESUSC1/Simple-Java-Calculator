@@ -7,6 +7,7 @@
 ---
  
  [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
+ [Orignal Project vs Our Additions](#Look_Comparison)
  
  # Project Metrics
 
@@ -42,7 +43,7 @@ If you use the executable "SimpleJavaCalculator.jar" file and that doesn't work,
 ```shell
 java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 ```
-
+<a name="Look_Comparison"></a>
 ## :sparkles: Example
 
 <div style="width: 800px;">

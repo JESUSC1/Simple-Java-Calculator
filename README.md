@@ -6,7 +6,7 @@
 
 ---
  
- [COMP 312 Project Modifications and Improvements](#COMP_312_Project_Modifications)
+ [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
  
  # Project Metrics
 

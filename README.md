@@ -38,7 +38,7 @@
 <a name="Mission_Statement"></a>
 ## Mission Statement
 
-Our simple Java calculator is designed to help novice developers learn how to create a calculator program with Java. Our easy-to-use code and intuitive user interface make it accessible and approachable for people of all skill levels. With a large subset of tools in Java and the use of Java Swing, we aim to teach users about both the back end process and a little bit about the front end process and give them a solid foundation for building more complex projects in the future.
+Our simple Java calculator is designed to help novice developers learn how to create a calculator program with Java. Our easy-to-use code and intuitive user interface make it accessible and approachable for people of all skill levels. With the use of a large subset of tools in Java and the use of Java Swing, we aim to teach users about both the back end process and a little bit about the front end process of software development and give them a solid foundation for building more complex projects in the future.
 
 
 ---

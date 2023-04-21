@@ -6,8 +6,8 @@
 
 ---
  
- [COMP 312 Project Modifications and Improvements](#COMP 312 Project Modifications and Improvements)
-
+ [COMP 312 Project Modifications and Improvements](#COMP_312_Project_Modifications)
+ 
  # Project Metrics
 
 - In-process
@@ -64,7 +64,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 - **[Pierre-Henry Soria](https://ph7.me)**
 
-<a name="COMP 312 Project Modifications and Improvements"></a>
+<a name="COMP_312_Project_Modifications"></a>
 ### COMP 312 Project Modifications and Improvements
 - Abilty to show Text Panel on Mac (Jonathan Drysdale-Anderson)
 - Button Placements (Jonathan Drysdale-Anderson)

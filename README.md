@@ -84,10 +84,13 @@ Before                     |  After
 <a name="How_to_new_features"></a>
 ## How to Use New Features
 - For any trig identity simply type in a value and press the specific trig identity button
+  - Ex: 2tan
 - For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30*pi)
   - Note that you cannot press pi and then a number. You must press pi then an operation then a number
 - For Combinations and Permuations you have to press a number then press the desired funciton and then another button followed by the equals button
-- For factorials, you must first press a number and then press the factorial button
+  - Ex: 12 nCr 6 =
+- For factorials and Euler's number, you must first press a number and then press the factorial or Euler button
+  - Ex: 6n! / 6e
 - To change Theme press the drop down menu at the top to switch from dark to light
 
 ## ⚖️ License

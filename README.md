@@ -47,7 +47,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 <a name="Look_Comparison"></a>
 ## :sparkles: Example
 
-Solarized dark             |  Solarized Ocean
+Before                     |  After
 :-------------------------:|:-------------------------:
 ![](Screenshots/screenshot.png)  |  ![](Screenshots/screenshot3.png)
 

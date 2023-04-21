@@ -42,7 +42,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 ## :sparkles: Example
 
-![Example: Java Calculator](Screenshots/screenshot3.png width ="100")
+<img src="Screenshots/screenshot3.png" width="400">
 
 ## 💡 Authors
 

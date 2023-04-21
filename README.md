@@ -44,14 +44,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 ## :sparkles: Example
 
-![Example: Java Calculator](Screenshots/screenshot.png)
-
-## You might also like :monocle_face:
-
-**[My Simple Java Text Editor](https://github.com/pH-7/Simple-Java-Text-Editor).**
-
-[![Open-Source Simple Java Text Editor](https://github.com/pH-7/Simple-Java-Text-Editor/blob/master/Screenshots/find-replace-word-in-java-text-editor.png)](https://github.com/pH-7/Simple-Java-Text-Editor "Open-Source Simple Java Text Editor")
-
+![Example: Java Calculator](Screenshots/screenshot3.png)
 
 ## 💡 Authors
 

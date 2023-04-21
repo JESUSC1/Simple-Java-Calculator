@@ -74,7 +74,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 - Software quality metrics displayed through GitHub Badges (sources: Codacy, CodeClimate, CodeCove, Travis CI) (Jesus Cantu)
 - Cot, Csc buttons (Ibrahim Ben Hadj Tahar)
 - Factorials, Permutations and Combinations (Roshan Ali)
-
+- *We contemplated doing a button that switches between degrees and radians but ran out of time to implement it properly
 
 
 ## 📮 Contact

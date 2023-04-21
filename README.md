@@ -50,11 +50,11 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 <p float="left">
   <div>
     <h3>Header 1</h3>
-    <img src="Screenshots/screenshot.png width="100" />
+    <img src="Screenshots/screenshot.png width="100">
   </div>
   <div>
     <h3>Header 2</h3>
-    <img src="Screenshots/screenshot3.png width="100" /> 
+    <img src="Screenshots/screenshot3.png width="100"> 
   </div>
 </p>
 

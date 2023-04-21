@@ -47,8 +47,14 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 <a name="Look_Comparison"></a>
 ## :sparkles: Example
 
-<img src="Screenshots/screenshot.png" width="425"/> <img src="Screenshots/screenshot3.png" width="425"/> 
-
+<div>
+  <h3>Header 1</h3>
+  <img src="Screenshots/screenshot.png" width="425"/>
+</div>
+<div>
+  <h3>Header 2</h3>
+  <img src="Screenshots/screenshot3.png" width="425"/> 
+</div>
 
 
 ## 💡 Authors

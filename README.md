@@ -8,6 +8,7 @@
  
  - [Orignal Project vs Our Additions](#Look_Comparison)
  - [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
+ - [How to use New Features](#How_to_new_features)
 
  
  # Project Metrics
@@ -75,6 +76,13 @@ Before                     |  After
 - Factorials, Permutations and Combinations (Roshan Ali)
 - **We contemplated doing a button that switches between degrees and radians but ran out of time to implement it properly**
 
+## How to Use New Features
+- For any trig identity simply type in a value and press the specific trig identity button
+- For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30*pi)
+  - Note that you cannot press pi and then a number. You must press pi then an operation then a number
+- For Combinations and Permuations you have to press a number then press the desired funciton and then another button followed by the equals button
+- For factorials, you must first press a number and then press the factorial button
+- To change Theme press the drop down menu at the top to switch from dark to light
 
 ## ⚖️ License
 

@@ -47,7 +47,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 <a name="Look_Comparison"></a>
 ## :sparkles: Example
 
-![alt-text-1]("Screenshots/screenshot.png "title-1") ![alt-text-2]("Screenshots/screenshot3.png "title-2")
+<img src="Screenshots/screenshot.png" width="425"/> <img src="Screenshots/screenshot3.png" width="425"/> 
 
 
 

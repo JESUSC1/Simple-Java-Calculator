@@ -64,7 +64,7 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 ### Modifications and Improvements
 - Abilty to show Text Panel on Mac (Jonathan Drysdale-Anderson)
 - Button Placements (Jonathan Drysdale-Anderson)
-- Button Signs (Super-Script instead of ^) (Jonathan Drysdale-Anderson)
+- Button Super-Scripts (Jonathan Drysdale-Anderson)
 - Inverse Trigonometric functions (Jonathan Drysdale-Anderson)
 - Decimal functionality (Jonathan Drysdale-Anderson)
 - Theme implementation (light, dark) (Jonathan Drysdale-Anderson)

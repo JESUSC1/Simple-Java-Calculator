@@ -6,8 +6,9 @@
 
 ---
  
- - [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
  - [Orignal Project vs Our Additions](#Look_Comparison)
+ - [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
+
  
  # Project Metrics
 

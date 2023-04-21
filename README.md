@@ -76,6 +76,7 @@ Before                     |  After
 - Factorials, Permutations and Combinations (Roshan Ali)
 - **We contemplated doing a button that switches between degrees and radians but ran out of time to implement it properly**
 
+<a name="How_to_new_features"></a>
 ## How to Use New Features
 - For any trig identity simply type in a value and press the specific trig identity button
 - For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30*pi)

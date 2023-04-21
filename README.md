@@ -47,17 +47,16 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 <a name="Look_Comparison"></a>
 ## :sparkles: Example
 
-<div style="width: 800px;">
-  <div style="width: 400px; display: inline-block; text-align: center;">
-    <h3>Before our Changes</h3>
-    <img src="Screenshots/screenshot.png" width="200">
+<p float="left">
+  <div>
+    <h3>Header 1</h3>
+    <img src="Screenshots/screenshot.png width="100" />
   </div>
-  <div style="width: 400px; display: inline-block; text-align: center;">
-    <h3>After our Changes</h3>
-    <img src="Screenshots/screenshot3.png" width="200">
+  <div>
+    <h3>Header 2</h3>
+    <img src="Screenshots/screenshot3.png width="100" /> 
   </div>
-</div>
-
+</p>
 
 
 ## 💡 Authors

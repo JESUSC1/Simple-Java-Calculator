@@ -49,7 +49,8 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 Before                     |  After
 :-------------------------:|:-------------------------:
-![](Screenshots/screenshot.png)  |  ![](Screenshots/screenshot3.png)
+<img src="Screenshots/screenshot.png" width="425"/>  |  <img src="Screenshots/screenshot3.png" width="425"/>
+
 
 
 ## 💡 Authors

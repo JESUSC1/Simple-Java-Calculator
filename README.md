@@ -5,10 +5,11 @@
 ![Logo Simple Java Calculator](logo.png)
 
 ---
- 
+ - [Mission Statement](#Mission_Statement)
  - [Orignal Project vs Our Additions](#Look_Comparison)
  - [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
  - [How to use New Features](#How_to_new_features)
+ 
 
  
  # Project Metrics
@@ -34,7 +35,11 @@
 - Other
 ![GitHub](https://img.shields.io/github/license/JESUSC1/Simple-Java-Calculator)
 
-This calculator is **simple** with an **easy to use code** to help novices **learn how to create a calculator** program with **`Java`**.
+<a name="Mission_Statement"></a>
+## Mission Statement
+
+Our simple Java calculator is designed to help novice developers learn how to create a calculator program with Java. Our easy-to-use code and intuitive user interface make it accessible and approachable for people of all skill levels. With a large subset of tools in Java and the use of Java Swing, we aim to teach users about both the back end process and a little bit about the front end process and give them a solid foundation for building more complex projects in the future.
+
 
 ---
   

@@ -62,18 +62,18 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 - **[Pierre-Henry Soria](https://ph7.me)**
 
 ### Modifications and Improvements
-- Text Panel on Mac
-- Button Placements
-- Button Signs (Super-Script instead of ^) 
-- Inverse Trigonometric functions
-- Decimal functionality
-- Theme implementation (light, dark)
-- Pi and Euler’s number buttons 
-- Factorial, Permutation, Combination 
-- Undefined Feature with division
-- Cot, Csc buttons added
-- Software quality metrics displayed through GitHub Badges (sources: Codacy, CodeClimate, CodeCove, Travis CI)
-- Factorial functions including permutations and combinations
+- Abilty to show Text Panel on Mac (Jonathan Drysdale-Anderson)
+- Button Placements (Jonathan Drysdale-Anderson)
+- Button Signs (Super-Script instead of ^) (Jonathan Drysdale-Anderson)
+- Inverse Trigonometric functions (Jonathan Drysdale-Anderson)
+- Decimal functionality (Jonathan Drysdale-Anderson)
+- Theme implementation (light, dark) (Jonathan Drysdale-Anderson)
+- Undefined Feature with division (Jonathan Drysdale-Anderson)
+- Ability to Run Application on Mac (Jesus Cantu)
+- Pi and Euler’s number buttons (Jesus Cantu)
+- Software quality metrics displayed through GitHub Badges (sources: Codacy, CodeClimate, CodeCove, Travis CI) (Jesus Cantu)
+- Cot, Csc buttons (Ibrahim Ben Hadj Tahar)
+- Factorials, Permutations and Combinations (Roshan Ali)
 
 
 

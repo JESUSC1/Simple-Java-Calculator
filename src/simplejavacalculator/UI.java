@@ -57,6 +57,8 @@ public class UI implements ActionListener {
    private final JButton butpi;
    
    private final JButton butdot;
+   private final JButton butFactorial;
+
    private final Calculator calc;
 
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6",
@@ -125,6 +127,7 @@ public class UI implements ActionListener {
       butEmpt = new JButton(" ");
       butEmpt2 = new JButton(" ");
       butpi = new JButton("π");
+      butFactorial= new JButton("x!");
       calc = new Calculator();
 
    }
@@ -237,6 +240,7 @@ public class UI implements ActionListener {
       panelSub9.add(butacos);
       panelSub9.add(butasin);
       panelSub9.add(butatan);
+      panelSub9.add(butFactorial);
       panel.add(panelSub9);
 
       panelSub8.add(butlog);
@@ -271,6 +275,7 @@ public class UI implements ActionListener {
       butatan.addActionListener(this);
       butdot.addActionListener(this);
       butpi.addActionListener(this);
+      butFactorial.addActionListener(this);
 
 
       butEqual.addActionListener(this);
@@ -409,6 +414,11 @@ public class UI implements ActionListener {
 
          if (source == butatan)
             writer(calc.calculateMono(Calculator.MonoOperatorModes.atan, reader()));
+
+         if (source == butFactorial) {
+            writer(calc.calculateMono(Calculator.MonoOperatorModes.factorial, reader()));
+            return;
+         }
 
          if (source == butEqual)
             writer(calc.calculateEqual(reader()));

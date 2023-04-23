@@ -25,7 +25,7 @@ public class Calculator {
     }
 
     public enum MonoOperatorModes {
-        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc
+        square, squareRoot, oneDividedBy, cos, sin, tan, acos, asin, atan, log, rate, abs, ln, cot, csc, factorial
     }
 
     public static Double num1;
@@ -167,8 +167,26 @@ public class Calculator {
             }
             return 1 / Math.sin(Math.toRadians(num));
         }
+        if (newMode == MonoOperatorModes.factorial) {
+            if (num < 0 || num != Math.floor(num)) {
+                return NaN;
+            }
+            return factorial(num.intValue());
+        }
 
         // never reach
         throw new Error();
     }
+
+    private static Double factorial(int num) {
+        if (num == 0 || num == 1) {
+            return 1.0;
+        }
+        double result = 1.0;
+        for (int i = 2; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
 }

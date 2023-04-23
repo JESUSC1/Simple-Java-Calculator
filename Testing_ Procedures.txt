@@ -1,0 +1,54 @@
+Click the "1" button on the calculator.
+Verify that the calculator display now shows "1" (Do this with all numbers).
+Click the "+" button.
+Click the "2" button.
+Click the "=" button.
+Verify that the calculator display now shows "3".
+Click the "C" button to clear the calculator display.
+Click the "π" button.
+Click the "sin" button.
+Verify that the calculator display now shows the sine of π, which is approximately 0.
+Click the "C" button to clear the calculator display.
+Click the "4" button.
+Click the "nPr" button.
+Click the "3" button.
+Click the "=" button.
+Verify that the calculator display now shows the number of permutations of 4 items taken 3 at a time, which is 24.
+Click the "C" button to clear the calculator display.
+Click the "4" button.
+Click the "nCr" button.
+Click the "3" button.
+Click the "=" button.
+Verify that the calculator display now shows the number of combinations of 4 items taken 3 at a time, which is 4.
+Click the "C" button to clear the calculator display.
+Click the "5" button.
+Click the "!" button.
+Verify that the calculator display now shows the factorial of 5, which is 120.
+Click the "C" button to clear the calculator display.
+Click the "0.5" button.
+Click the "sin⁻¹" button.
+Click the "=" button.
+Verify that the calculator display now shows the inverse sine of 0.5, which is approximately 0.52 radians.
+Click the "C" button to clear the calculator display.
+Click the "45" button.
+Click the "Cot" button.
+Click the "=" button.
+Verify that the calculator display now shows the cotangent of 45 degrees, which is approximately 1.
+Click the "C" button to clear the calculator display.
+Click the "8" button.
+Click the "%" button.
+Verify that the calculator display now shows "0.08".
+Click the "C" button to clear the calculator display.
+Click the "8" button.
+Click the "1/x" button.
+Click the "=" button.
+Verify that the calculator display now shows the reciprocal of 8, which is approximately 0.125.
+Click the "C" button to clear the calculator display.
+Click the "e" button.
+Click the "x²" button.
+Verify that the calculator display now shows the square of e, which is approximately 7.39.
+Click the "C" button to clear the calculator display.
+Click the "e" button.
+Click the "ln" button.
+Verify that the calculator display now shows the square of e, which is approximately 1.
+Change from light to dark and retest funcitons to see if everything shows up correctly.

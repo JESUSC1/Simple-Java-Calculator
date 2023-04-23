@@ -1,10 +1,17 @@
 <div align="center">
 
-# Simple Java Calculator
+# Simple Java Calculator with COMP 312 Additions
 
 ![Logo Simple Java Calculator](logo.png)
 
 ---
+ - [Mission Statement](#Mission_Statement)
+ - [Orignal Project vs Our Additions](#Look_Comparison)
+ - [COMP 312 Project Modifications, Improvements, and Contributions](#COMP_312_Project_Modifications)
+ - [How to use New Features](#How_to_new_features)
+ 
+
+ 
  # Project Metrics
 
 - In-process
@@ -28,29 +35,28 @@
 - Other
 ![GitHub](https://img.shields.io/github/license/JESUSC1/Simple-Java-Calculator)
 
-This calculator is **simple** with an **easy to use code** to help novices **learn how to create a calculator** program with **`Java`**.
+<a name="Mission_Statement"></a>
+## Mission Statement
+
+Our simple Java calculator is designed to help novice developers learn how to create a calculator program with Java. Our easy-to-use code and intuitive user interface make it accessible and approachable for people of all skill levels. With the use of a large subset of tools in Java and the use of Java Swing, we aim to teach users about both the back end process and a little bit about the front end process of software development and give them a solid foundation for building more complex projects in the future.
+
 
 ---
   
 </div>
-
-This project was **originally written using `Eclipse`**, but I have **migrated it to NetBeans**.
 
 If you use the executable "SimpleJavaCalculator.jar" file and that doesn't work, you can type this in your terminal:
 
 ```shell
 java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 ```
-
+<a name="Look_Comparison"></a>
 ## :sparkles: Example
 
-![Example: Java Calculator](Screenshots/screenshot.png)
+Before                     |  After
+:-------------------------:|:-------------------------:
+<img src="Screenshots/screenshot.png" width="425"/>  |  <img src="Screenshots/screenshot3.png" width="425"/>
 
-## You might also like :monocle_face:
-
-**[My Simple Java Text Editor](https://github.com/pH-7/Simple-Java-Text-Editor).**
-
-[![Open-Source Simple Java Text Editor](https://github.com/pH-7/Simple-Java-Text-Editor/blob/master/Screenshots/find-replace-word-in-java-text-editor.png)](https://github.com/pH-7/Simple-Java-Text-Editor "Open-Source Simple Java Text Editor")
 
 
 ## 💡 Authors
@@ -59,18 +65,33 @@ java -jar /your_calculator_directory/SimpleJavaCalculator.jar`
 
 - **[Pierre-Henry Soria](https://ph7.me)**
 
-### Modifications and Improvements
+<a name="COMP_312_Project_Modifications"></a>
+### COMP 312 Project Modifications, Improvements and Contributions
+- Abilty to show Text Panel on Mac (Jonathan Drysdale-Anderson)
+- Button Placements (Jonathan Drysdale-Anderson)
+- Button Super-Scripts (Jonathan Drysdale-Anderson)
+- Inverse Trigonometric functions (Jonathan Drysdale-Anderson)
+- Decimal functionality (Jonathan Drysdale-Anderson)
+- Theme implementation (light, dark) (Jonathan Drysdale-Anderson)
+- Undefined Feature with division (Jonathan Drysdale-Anderson)
+- Ability to Run Application on Mac (Jesus Cantu)
+- Pi and Euler’s number buttons (Jesus Cantu)
+- Software quality metrics displayed through GitHub Badges (sources: Codacy, CodeClimate, CodeCove, Travis CI) (Jesus Cantu)
+- Cot, Csc buttons (Ibrahim Ben Hadj Tahar)
+- Factorials, Permutations and Combinations (Roshan Ali)
+- **We contemplated doing a button that switches between degrees and radians but ran out of time to implement it properly**
 
-- [Achintha Gunasekara](http://www.achinthagunasekara.com)
-- [xdvrx1](https://github.com/xdvrx1)
-
-
-## 📮 Contact
-
-Pierre-Henry Soria: pierrehs [AT] hotmail [D0T] com
-
-Achintha Gunasekara: contact [AT] achinthagunasekara [D0T] com
-
+<a name="How_to_new_features"></a>
+## How to Use New Features
+- For any trig identity simply type in a value and press the specific trig identity button
+  - Ex: 2tan
+- For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30 * pi =)
+  - Note that you cannot press pi and then a number. You must press pi then an operation then a number
+- For Combinations and Permuations you have to press a number then press the desired funciton and then another button followed by the equals button
+  - Ex: 12 nCr 6 =
+- For factorials and Euler's number, you must first press a number and then press the factorial or Euler button
+  - Ex: 6n! / 6e
+- To change Theme press the drop down menu at the top to switch from dark to light
 
 ## ⚖️ License
 

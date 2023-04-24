@@ -77,9 +77,14 @@ Before                     |  After
 - Ability to Run Application on Mac (Jesus Cantu)
 - Pi and Euler’s number buttons (Jesus Cantu)
 - Software quality metrics displayed through GitHub Badges (sources: Codacy, CodeClimate, CodeCove, Travis CI) (Jesus Cantu)
-- Cot, Csc buttons (Ibrahim Ben Hadj Tahar)
+- Addition and implementation of advanced trigonometric functions (Ibrahim Ben Hadj Tahar)
 - Factorials, Permutations and Combinations (Roshan Ali)
-- **We contemplated doing a button that switches between degrees and radians but ran out of time to implement it properly**
+
+- **Here are some potential ideas that were considered but not implemented due to time constraints:**
+- Degree-Radian toggle button: A button to switch between degree and radian mode for trigonometric functions, allowing users to work with angles in their preferred unit.
+- Keyboard input support: Enable users to perform calculations using their keyboard, improving the user experience and efficiency
+- Customizable button layout: Allow users to rearrange and customize the button layout to suit their preferences and usage patterns
+- Responsive design: Optimize the calculator's user interface for various screen sizes and devices, ensuring a consistent experience across different platforms
 
 <a name="How_to_new_features"></a>
 ## How to Use New Features

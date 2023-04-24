@@ -77,17 +77,25 @@ Before                     |  After
 - Ability to Run Application on Mac (Jesus Cantu)
 - Pi and Euler’s number buttons (Jesus Cantu)
 - Software quality metrics displayed through GitHub Badges (sources: Codacy, CodeClimate, CodeCove, Travis CI) (Jesus Cantu)
-- Cot, Csc buttons (Ibrahim Ben Hadj Tahar)
+- Addition and implementation of advanced trigonometric functions (Ibrahim Ben Hadj Tahar)
 - Factorials, Permutations and Combinations (Roshan Ali)
-- **We contemplated doing a button that switches between degrees and radians but ran out of time to implement it properly**
+
+- **Here are some potential ideas that were considered but not implemented due to time constraints:**
+- Degree-Radian toggle button: A button to switch between degree and radian mode for trigonometric functions, allowing users to work with angles in their preferred unit.
+- Keyboard input support: Enable users to perform calculations using their keyboard, improving the user experience and efficiency
+- Customizable button layout: Allow users to rearrange and customize the button layout to suit their preferences and usage patterns
+- Responsive design: Optimize the calculator's user interface for various screen sizes and devices, ensuring a consistent experience across different platforms
 
 <a name="How_to_new_features"></a>
 ## How to Use New Features
 - For any trig identity simply type in a value and press the specific trig identity button
-- For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30*pi)
+  - Ex: 2tan
+- For the pi button you can use pi by itself by just pressing the button or by doing an operation with another number such as (30 * pi =)
   - Note that you cannot press pi and then a number. You must press pi then an operation then a number
 - For Combinations and Permuations you have to press a number then press the desired funciton and then another button followed by the equals button
-- For factorials, you must first press a number and then press the factorial button
+  - Ex: 12 nCr 6 =
+- For factorials and Euler's number, you must first press a number and then press the factorial or Euler button
+  - Ex: 6n! / 6e
 - To change Theme press the drop down menu at the top to switch from dark to light
 
 ## ⚖️ License

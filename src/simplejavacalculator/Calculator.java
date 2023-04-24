@@ -135,7 +135,7 @@ public class Calculator {
                 return Math.sin(Math.toRadians(num));
             }
         }
-        if (newMode == MonoOperatorModes.acos) {
+       if (newMode == MonoOperatorModes.acos) {
             if (num < -1 || num > 1) {
                 return NaN;
             }

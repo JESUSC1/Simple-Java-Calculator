@@ -73,8 +73,6 @@ public class Calculator {
                     fact(number));
         }
 
-
-
         // never reach
         throw new Error();
     }
@@ -125,25 +123,32 @@ public class Calculator {
             return 1 / num;
         }
         if (newMode == MonoOperatorModes.cos) {
+            if (num % Math.PI == 0){
+                return Math.cos(0);
+            }
             return Math.cos(Math.toRadians(num));
         }
         if (newMode == MonoOperatorModes.sin) {
-            return Math.sin(Math.toRadians(num));
+            if (num % Math.PI == 0){
+                return Math.sin(0);
+            }else{
+                return Math.sin(Math.toRadians(num));
+            }
         }
         if (newMode == MonoOperatorModes.acos) {
             if (num < -1 || num > 1) {
                 return NaN;
             }
-            return Math.toRadians(Math.acos(num));
+            return Math.acos((num));
         }
         if (newMode == MonoOperatorModes.asin) {
             if (num < -1 || num > 1) {
                 return NaN;
             }
-            return Math.toRadians(Math.asin(num));
+            return Math.asin((num));
         }
         if (newMode == MonoOperatorModes.atan) {
-            return Math.toRadians(Math.atan(num));
+            return Math.atan((num));
         }
         if (newMode == MonoOperatorModes.tan) {
             if (num % 180 == 90) {
